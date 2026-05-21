@@ -41,6 +41,6 @@ The project currently uses a hardcoded database file path, which makes it enviro
 
 ## Documentation
 
-- Capabilities → [docs/Capability.md]
-- Limitations → [docs/Limitations.md]  
-- Future Improvements → [docs/Improvements.md]
+- Capabilities → [docs/Capability.md](docs/Capability.md)  
+- Limitations → [docs/Limitations.md](docs/Limitations.md)  
+- Future Improvements → [docs/Improvements.md](docs/Improvements.md)
