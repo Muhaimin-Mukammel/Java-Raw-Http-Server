@@ -1,36 +1,31 @@
-# ARCHITECTURE documentation
+# Architecture
 
-## Simple Explanation of what the project dose
-    This project is a simple HTTP server build using Java sockets with file-based storage. 
-    It mimics basic REST API behaviour (GET, POST, PATCH, DELETE).
+## What This Project Does
+This project is a simple HTTP server built using Java sockets with file-based storage.
+It mimics basic REST API behaviour (GET, POST, PATCH, DELETE).
 
-## Architecture 
-    Client -> Server -> Router -> Logic -> Database ( request cycle )
-    Database -> Logic -> Router -> Server -> Client ( response cycle )
+## Architecture
+Client -> Server -> Router -> Logic -> Database ( request cycle )
+Database -> Logic -> Router -> Server -> Client ( response cycle )
 
-## Request-Response flow
-    1. Client sends HTTP request using Socket
-    2. Server receives request via ServerSocket
-    3. Server parses request line + body
-    4. Router checks HTTP method (GET/POST/PATCH/DELETE)
-    5. Router forwards request to Logic layer
-    6. Logic performs operations on file-based database
-    7. Response is returned back to Client
+## Request-Response Flow
+1. Client sends HTTP request using Socket
+2. Server receives request via ServerSocket
+3. Server parses request line and headers
+4. Server extracts body using Content-Length header
+5. Router checks HTTP method (GET/POST/PATCH/DELETE)
+6. Router forwards request to Logic layer
+7. Logic performs operations on file-based database
+8. Response is returned back to Client
 
-## Modules 
+## Modules
 
-1. Server
-Handles incoming connections and request parsing.
+**Server** — Handles incoming connections, header parsing, and body extraction.
 
-2. Client
-Sends raw HTTP-like requests to server.
+**Client** — Sends raw HTTP requests to the server for testing.
 
-3. Router
-Decides which function to call based on HTTP method and URL.
+**Router** — Decides which function to call based on HTTP method and URL.
 
-4. Logic
-Contains business logic (CRUD operations).
+**Logic** — Contains business logic and enforces resource validation.
 
-5. Database
-Handles file-based storage operations.
-
+**Database** — Handles all file-based storage operations (read, write, update, delete).
