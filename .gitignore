@@ -1,0 +1,17 @@
+# Compiled files
+*.class
+
+# Build output
+target/
+build/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Logs 
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
