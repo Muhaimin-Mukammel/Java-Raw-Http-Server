@@ -63,7 +63,7 @@ All syntax and implementation patterns were learned from documentation, videos, 
 ## Documentation
 
 - Capabilities → [docs/Capability.md](docs/Capability.md)
-- Limitations → [docs/Limitations.md](docs/Limitations.md)
+- Limitations → [docs/Limitations.md](docs/Limitation.md)
 - Architecture → [docs/Architecture.md](docs/ARCHITECTURE.md)
 - API → [docs/API.md](docs/API.md)
 - Future Improvements → [docs/Improvements.md](docs/Improvements.md)
